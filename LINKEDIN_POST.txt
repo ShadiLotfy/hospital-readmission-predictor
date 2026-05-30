@@ -1,0 +1,36 @@
+LINKEDIN POST — Hospital Readmission Risk Predictor
+=====================================================
+
+🏥 New Project: Predicting Hospital Readmissions with Machine Learning
+
+Every year, hospitals lose billions to preventable 30-day readmissions. The real question is: can we identify high-risk patients before they leave the hospital?
+
+I built an end-to-end ML pipeline to answer exactly that.
+
+📊 The Dataset
+101,766 diabetic patient records from 130 US hospitals (UCI repository) — a real-world, messy, class-imbalanced dataset that required serious preprocessing before any modeling could begin.
+
+🔧 What I Built
+
+→ Full data cleaning pipeline (missing value strategy, deduplication, cohort selection)
+→ 8 engineered features including utilization score, comorbidity proxy, and HbA1c control flag
+→ Trained and benchmarked 5 ML models: Logistic Regression, Decision Tree, Random Forest, Gradient Boosting, and XGBoost
+→ Handled class imbalance with SMOTE (only ~11% of patients were early readmissions)
+→ Hyperparameter tuning with RandomizedSearchCV (40 iterations)
+→ SHAP explainability to understand what drives each prediction
+→ Business impact analysis: optimized the decision threshold by minimizing cost, not just maximizing accuracy
+→ Deployed a Streamlit clinical decision support app
+
+📈 Results
+Tuned XGBoost achieved AUC-ROC of 0.83 — a +0.33 improvement over random baseline. At the optimal threshold, the model catches ~67% of actual readmissions and is estimated to save $2.1M per 10,000 patients compared to no intervention.
+
+🧠 Biggest lessons learned:
+1. Class imbalance is the real challenge in healthcare ML — SMOTE changed everything
+2. Engineered features outperformed raw features in SHAP importance
+3. Optimizing for business cost (not accuracy) shifted the ideal threshold from 0.5 → 0.35
+4. Explainability via SHAP is non-negotiable when the end user is a clinician
+
+The full code, notebook, and Streamlit app are on GitHub 👇
+🔗 [YOUR GITHUB LINK HERE]
+
+#DataScience #MachineLearning #Healthcare #XGBoost #Python #SHAP #Streamlit #OpenToWork #JuniorDataScientist #MLProject #HealthcareAI #FeatureEngineering
